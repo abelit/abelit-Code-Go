@@ -43,3 +43,112 @@
 [GIN] 2020/05/19 - 17:29:42 | 404 |      35.885µs |             ::1 | GET      "/favicon.ico"
 ::1 - [Tue, 19 May 2020 17:30:21 CST] "GET /test HTTP/1.1 200 33.031µs "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
 [GIN] 2020/05/19 - 17:30:21 | 200 |      78.137µs |             ::1 | GET      "/test"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func4 (5 handlers)
+[GIN-debug] GET    /test                     --> gindemo/routes.TestGet (5 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [Tue, 19 May 2020 21:32:13 CST] "GET / HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 21:32:13 | 200 |       998.5µs |             ::1 | GET      "/"
+::1 - [Tue, 19 May 2020 21:32:13 CST] "GET /favicon.ico HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 21:32:13 | 404 |            0s |             ::1 | GET      "/favicon.ico"
+::1 - [Tue, 19 May 2020 21:32:18 CST] "GET / HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 21:32:18 | 200 |            0s |             ::1 | GET      "/"
+::1 - [Tue, 19 May 2020 21:32:21 CST] "GET / HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 21:32:21 | 200 |            0s |             ::1 | GET      "/"
+::1 - [Tue, 19 May 2020 21:32:25 CST] "GET /test HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 21:32:25 | 200 |      1.0013ms |             ::1 | GET      "/test"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func4 (5 handlers)
+[GIN-debug] GET    /test                     --> gindemo/router.TestGet (5 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [Tue, 19 May 2020 21:34:26 CST] "GET /test HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 21:34:26 | 200 |       999.5µs |             ::1 | GET      "/test"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func4 (5 handlers)
+[GIN-debug] GET    /test                     --> gindemo/router.TestGet (5 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [Tue, 19 May 2020 21:35:05 CST] "GET /test HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 21:35:05 | 200 |            0s |             ::1 | GET      "/test"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func4 (5 handlers)
+[GIN-debug] GET    /test                     --> gindemo/router.TestGet (5 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func4 (5 handlers)
+[GIN-debug] GET    /test                     --> gindemo/router.TestGet (5 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func4 (5 handlers)
+[GIN-debug] GET    /test                     --> gindemo/router.TestGet (5 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [Tue, 19 May 2020 23:08:02 CST] "GET / HTTP/1.1 200 1ms "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 23:08:02 | 200 |           1ms |             ::1 | GET      "/"
+::1 - [Tue, 19 May 2020 23:08:02 CST] "GET /favicon.ico HTTP/1.1 404 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 23:08:02 | 404 |      1.0008ms |             ::1 | GET      "/favicon.ico"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func1 (4 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /test                     --> gindemo/router.TestGet (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/05/19 - 23:08:48 | 200 |            0s |             ::1 | GET      "/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /ping                     --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /JSONP?callback=x         --> main.main.func4 (5 handlers)
+[GIN-debug] GET    /test                     --> gindemo/router.TestGet (5 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [Tue, 19 May 2020 23:17:45 CST] "GET / HTTP/1.1 200 0s "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" "
+[GIN] 2020/05/19 - 23:17:45 | 200 |       999.7µs |             ::1 | GET      "/"

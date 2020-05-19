@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"gindemo/router"
 	"io"
 	"net/http"
 	"os"
@@ -9,7 +10,6 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"demo/router"
 )
 
 func main() {
@@ -19,11 +19,18 @@ func main() {
 	// Logging to a file.
 	// f, _ := os.Create("gin.log")
 	dir, _ := filepath.Abs(filepath.Dir(""))
+	logDir := dir + "/log/"
 	logFileName := time.Now().Format("20060102") + ".log"
-	logFilePath := dir + "/log/" + logFileName
+	logFilePath := logDir + logFileName
 	var f *os.File
 
-	_, err := os.Stat(logFilePath)
+	_, err := os.Stat(logDir)
+
+	if err != nil {
+		os.MkdirAll(logDir, 0666)
+	}
+
+	_, err = os.Stat(logFilePath)
 
 	if err != nil {
 		f, _ = os.Create(logFilePath)
@@ -76,7 +83,7 @@ func main() {
 		c.JSONP(http.StatusOK, data)
 	})
 
-	r.GET("/test", router.testGet)
+	r.GET("/test", router.TestGet)
 
 	r.Run(":8080")
 }

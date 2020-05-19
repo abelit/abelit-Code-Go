@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func testGet(c *gin.Context) {
+func TestGet(c *gin.Context) {
 	data := map[string]interface{}{
 		"name": "abelit",
 		"age":  28,
