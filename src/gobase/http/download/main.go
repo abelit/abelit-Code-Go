@@ -74,9 +74,12 @@ func main() {
 
 	var url string //下载文件的地址
 	var outDir string
+	var numThread int
 
 	parsearg.StringVar(&outDir, "d", "", "speciafy the directory.")
 	parsearg.StringVar(&outDir, "dir", "", "speciafy the directory.")
+	parsearg.IntVar(&numThread, "t", 5, "speciafy the number of downloading thread.")
+	parsearg.IntVar(&numThread, "thread", 5, "speciafy the number of downloading thread.")
 	parsearg.Parse()
 
 	_, err := os.Stat(outDir)
@@ -89,7 +92,7 @@ func main() {
 	}
 
 	url = "https://vscode.cdn.azure.cn/stable/e5e9e69aed6e1984f7499b7af85b3d05f9a6883a/code_1.49.2-1600965325_amd64.deb"
-	downloader := NewFileDownloader(url, "", outDir, 20)
+	downloader := NewFileDownloader(url, "", outDir, numThread)
 	if err := downloader.Run(); err != nil {
 		// fmt.Printf("\n%s", err)
 		log.Fatal(err)
