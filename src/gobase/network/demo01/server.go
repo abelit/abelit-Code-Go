@@ -11,12 +11,13 @@ func process(conn net.Conn) {
 	for {
 		buf := make([]byte, 1024)
 
-		fmt.Printf("wait info from client %v", conn.RemoteAddr().String())
+		fmt.Printf("wait info from client %v\n", conn.RemoteAddr().String())
 
 		n, err := conn.Read(buf)
 
 		if err != nil {
 			fmt.Println("read from client error is ", err)
+			return
 		}
 
 		fmt.Print(string(buf[:n]))
