@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net"
 )
 
@@ -14,6 +15,10 @@ func process(conn net.Conn) {
 		fmt.Printf("wait info from client %v\n", conn.RemoteAddr().String())
 
 		n, err := conn.Read(buf)
+
+		if err == io.EOF {
+			fmt.Println("client has exited.")
+		}
 
 		if err != nil {
 			fmt.Println("read from client error is ", err)
