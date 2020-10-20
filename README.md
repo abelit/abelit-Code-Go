@@ -213,3 +213,13 @@ go install github.com/beego/bee
 Q1. git 或 go get 的其他包源码无法同步到自建的 github repository？
 
 > A1. 删除下载的 repository 下的".git"文件夹。
+
+
+# Go and Database
+
+## Redis
+
+### 1.redigo
+```bash
+go get -u -v github.com/garyburd/redigo 
+```
