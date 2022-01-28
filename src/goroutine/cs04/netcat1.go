@@ -3,6 +3,7 @@ package main
 import (
 	"io"
 	"log"
+	"net"
 	"os"
 )
 
@@ -23,12 +24,14 @@ func (r MyReader) Read(b []byte) (int, error) {
 }
 
 func main() {
-	// conn, err := net.Dial("tcp","localhost:8000")
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-	// defer conn.Close()
+	conn, err := net.Dial("tcp","localhost:8000")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer conn.Close()
+
+	mustCopy(os.Stdout, conn)
 	
 	// mustCopy(os.Stdout, strings.NewReader("Hello, World\n"))
-	mustCopy(os.Stdout, MyReader{})
+	// mustCopy(os.Stdout, MyReader{})
 }
